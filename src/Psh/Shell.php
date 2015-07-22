@@ -50,7 +50,7 @@ class Shell {
 			$command->setArgs($args)->execute();
 			return $command->getResponse();
 		} catch (CommandException $e) {
-			return $command->getUsage();
+			return (method_exists($command, 'getUsage')) ? $command->getUsage() : null;
 		}
 	}
 
