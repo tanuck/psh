@@ -1,0 +1,26 @@
+{
+    "name": "tanuck/psh",
+    "description": "Psh. The PHP Shell.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Tancock",
+            "email": "tanuck@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "bin": ["bin/psh"],
+    "autoload": {
+        "psr-0": {
+            "Psh": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Psh\\Test": "tests/"
+        }
+    }
+}

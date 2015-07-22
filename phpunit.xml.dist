@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+	colors="true"
+	processIsolation="false"
+    stopOnFailure="false"
+    syntaxCheck="false"
+    bootstrap="./tests/bootstrap.php"
+	>
+
+	<testsuites>
+		<testsuite name="Psh Test Suite">
+			<directory>./tests/Psh/</directory>
+		</testsuite>
+	</testsuites>
+	
+</phpunit>
