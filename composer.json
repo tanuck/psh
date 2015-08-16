@@ -1,6 +1,7 @@
 {
     "name": "tanuck/psh",
     "description": "Psh. The PHP Shell.",
+    "keywords": ["psh", "shell", "php"],
     "license": "MIT",
     "authors": [
         {
