@@ -8,11 +8,6 @@ class Shell {
 
 	protected $pwd = null;
 
-	public function __construct()
-	{
-		$this->pwd = getcwd();
-	}
-
 	public function run()
 	{
 		$this->welcome();
@@ -50,7 +45,7 @@ class Shell {
 			$command->setArgs($args)->execute();
 			return $command->getResponse();
 		} catch (CommandException $e) {
-			return (method_exists($command, 'getUsage')) ? $command->getUsage() : null;
+			return $e->getMessage();
 		}
 	}
 
@@ -67,7 +62,7 @@ class Shell {
 
 	private function prompt()
 	{
-		printf('Psh -> %s  ', $this->pwd);
+		printf('-> %s  ', getcwd());
 	}
 
 	private function loadCommand($command)
